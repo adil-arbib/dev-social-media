@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "39542200587",
+    "project_id": "social-media-a01bf",
+    "storage_bucket": "social-media-a01bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39542200587:android:0e86a1d708416dfab22a0e",
+        "android_client_info": {
+          "package_name": "com.arbib.socialmedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39542200587-3q2qs0dt41op1o1rb8c6vaeer1sm3r6i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arbib.socialmedia",
+            "certificate_hash": "aaa9e84130f738b9a1b7f941a6fd4438b234961f"
+          }
+        },
+        {
+          "client_id": "39542200587-oc8ja6fn42eq4kj51bs90p7ch426366q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDe9nVqMBhSs8xmsDMmsgKH8oFv7cJGKYo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39542200587-oc8ja6fn42eq4kj51bs90p7ch426366q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

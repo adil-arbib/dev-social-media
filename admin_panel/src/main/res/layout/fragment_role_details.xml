@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.RoleDetailsFragment">
+
+    <ImageView
+        android:id="@+id/icon_back_arrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_role_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/signika_medium"
+        android:text="Moderator"
+        android:textColor="@color/medium_black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_back_arrow"
+        app:layout_constraintStart_toEndOf="@+id/icon_back_arrow"
+        app:layout_constraintTop_toTopOf="@id/icon_back_arrow" />
+
+    <ImageView
+        android:id="@+id/icon_delete_role"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/trash"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_role_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lbl_role_name" />
+
+
+    <TextView
+        android:id="@+id/lbl_role_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/signika_regular"
+        android:text="Role Details"
+        android:textColor="@color/medium_black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/icon_back_arrow"
+        app:layout_constraintTop_toBottomOf="@+id/icon_back_arrow" />
+
+    <View
+        android:id="@+id/line_role"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_role_details"
+        app:layout_constraintStart_toStartOf="@+id/lbl_role_details"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_role_details" />
+
+    <TextView
+        android:id="@+id/lbl_operations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/signika_regular"
+        android:text="Operations"
+        android:textColor="@color/medium_black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_back_arrow" />
+
+    <View
+        android:id="@+id/line_operation"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_operations"
+        app:layout_constraintStart_toStartOf="@+id/lbl_operations"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_operations" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const_role_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_role_details"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/lbl_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/signika_light"
+            android:text="Name"
+            android:textColor="@color/medium_black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/lbl_description"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lbl_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/signika_light"
+            android:text="Description"
+            android:textColor="@color/medium_black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_name" />
+
+        <EditText
+            android:id="@+id/edt_role_name"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/edittext_bg"
+            android:paddingStart="12dp"
+            android:paddingEnd="10dp"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lbl_name"
+            app:layout_constraintTop_toTopOf="@+id/lbl_name" />
+
+        <EditText
+            android:id="@+id/edt_role_description"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/edittext_bg"
+            android:paddingStart="12dp"
+            android:paddingEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lbl_description"
+            app:layout_constraintTop_toTopOf="@+id/lbl_description" />
+
+        <TextView
+            android:id="@+id/lbl_create_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/signika_light"
+            android:text="Create at"
+            android:textColor="@color/medium_black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/lbl_description"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_description" />
+
+        <TextView
+            android:id="@+id/lbl_update_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/signika_light"
+            android:text="Update at"
+            android:textColor="@color/medium_black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/lbl_description"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_create_at" />
+
+        <TextView
+            android:id="@+id/txt_create_at"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/edittext_bg"
+            android:paddingStart="12dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/medium_black"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_create_at"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lbl_description"
+            app:layout_constraintTop_toTopOf="@+id/lbl_create_at" />
+
+        <TextView
+            android:id="@+id/txt_update_at"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/edittext_bg"
+            android:paddingStart="12dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/medium_black"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_update_at"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lbl_description"
+            app:layout_constraintTop_toTopOf="@+id/lbl_update_at" />
+
+
+        <Button
+            android:id="@+id/btn_reset_role"
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableStart="@drawable/icon_cancel_drwable"
+            android:paddingStart="12dp"
+            android:paddingEnd="10dp"
+            android:text="Reset"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_update_at" />
+
+
+        <Button
+            android:id="@+id/btn_save_role"
+            android:layout_width="100dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/btn_save_bg"
+            android:drawableStart="@drawable/icon_save_drawable"
+            android:paddingStart="12dp"
+            android:paddingEnd="10dp"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_reset_role"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_reset_role" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const_operations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_role_details">
+
+
+        <Button
+            android:id="@+id/btn_add_operation"
+            android:layout_width="90dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/btn_save_bg"
+            android:drawableStart="@drawable/icon_add"
+            android:paddingStart="12dp"
+            android:paddingEnd="10dp"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/edt_search_operation"
+            android:layout_width="250dp"
+            android:layout_height="34dp"
+            android:background="@drawable/edittext_bg"
+            android:fontFamily="@font/signika_regular"
+            android:textColor="@color/medium_black"
+            app:layout_constraintTop_toTopOf="@+id/btn_add_operation"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_add_operation"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:hint="Find an operation ... "
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+
+
+        <TextView
+            android:id="@+id/lbl_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/signika_light"
+            android:text="Label"
+            android:textColor="@color/medium_black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_search_operation"/>
+
+        <TextView
+            android:id="@+id/lbl_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/signika_light"
+            android:text="Action"
+            android:textColor="@color/medium_black"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_search_operation"
+            android:layout_marginEnd="20dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcView_operation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_action"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            tools:listitem="@layout/item_operations"
+            android:padding="15dp"/>
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

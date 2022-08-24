@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"
+           />
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Login to Company\n\t\t\t\tadmin panel"
+            android:textAllCaps="false"
+            android:layout_marginTop="50dp"
+            android:textSize="25sp"/>
+
+        <com.libizo.CustomEditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/edtPassword"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:hint="Email"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress"
+            app:libIZO_clearIconTint="@color/primary_blue"
+            app:libIZO_setBorderColor="@color/primary_blue"
+            app:libIZO_setBorderView="true"
+            app:libIZO_setClearIconVisible="true"
+            app:libIZO_setCornerRadius="5dp"
+            app:libIZO_setStrokeWidth="2dp"
+            />
+
+        <com.libizo.CustomEditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline"
+            android:layout_marginTop="30dp"
+            android:hint="Password"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:inputType="textPassword"
+            app:libIZO_clearIconTint="@color/primary_blue"
+            app:libIZO_setBorderColor="@color/primary_blue"
+            app:libIZO_setBorderView="true"
+            app:libIZO_setClearIconVisible="false"
+            app:libIZO_setCornerRadius="5dp"
+            app:libIZO_hideShowPasswordIconTint="@color/primary_blue"
+            app:libIZO_setStrokeWidth="2dp"
+            />
+
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:text="Login"
+            android:textSize="22sp"
+            android:textAllCaps="false"
+            style="?attr/materialButtonOutlinedStyle"
+            android:backgroundTint="@color/primary_blue"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/edtPassword"
+            app:layout_constraintStart_toStartOf="@id/edtPassword"
+            app:layout_constraintEnd_toEndOf="@id/edtPassword"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/txtForgetPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnLogin"
+            android:text="Forget password?"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/txtForgetPass"
+            app:layout_constraintStart_toStartOf="@+id/txtForgetPass"
+            app:layout_constraintEnd_toEndOf="@+id/txtForgetPass"/>
+
+        <TextView
+            android:id="@+id/txtDont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/txtForgetPass"
+            app:layout_constraintStart_toStartOf="@id/edtPassword"
+            app:layout_constraintEnd_toEndOf="@id/edtPassword"
+            android:layout_marginEnd="100dp"/>
+        <TextView
+            android:id="@+id/txtCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create one?"
+            android:textColor="@color/primary_blue"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/txtDont"
+            app:layout_constraintTop_toBottomOf="@+id/txtForgetPass"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/primary_blue"
+            app:layout_constraintTop_toBottomOf="@+id/txtCreateAccount"
+            app:layout_constraintStart_toStartOf="@+id/txtCreateAccount"
+            app:layout_constraintEnd_toEndOf="@+id/txtCreateAccount"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
